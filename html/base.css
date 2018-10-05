@@ -1,0 +1,71 @@
+/*
+ * Copyright(C) 2018 Hunsup Jung All Right Reserved
+ */
+
+/* Basic */
+
+body {
+    background-color: #fff;
+    color: #000;
+}
+
+@media screen and (max-width: 480px) {
+    html, body {
+        min-width: 320px;
+    }
+}
+
+body.is-loading *, body.is-loading *:before, body.is-loading *:after {
+    -moz-animation: none !important;
+    -webkit-animation: none !important;
+    -ms-animation: none !important;
+    animation: none !important;
+    -moz-transition: none !important;
+    -webkit-transition: none !important;
+    -ms-transition: none !important;
+    transition: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.5em;
+}
+
+h1 {
+    /* Default 2em */
+    font-size: 2.2rem;
+}
+
+h2 {
+    /* Default 1.5em */
+    font-size: 1.7rem;
+}
+
+h3 {
+    /* Default 1.17em */
+    font-size: 1.3rem;
+}
+
+h4 {
+    /* Default 1em */
+    font-size: 1.1rem;
+}
+
+h5 {
+    /* Default 0.83em */
+    font-size: .9rem;
+}
+
+h6 {
+    /* Default 0.67em */
+    font-size: .7rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}

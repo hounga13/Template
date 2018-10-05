@@ -1,0 +1,28 @@
+/*
+ * Copyright(C) 2018 Hunsup Jung All Right Reserved
+ */
+
+ /* Reset */
+
+html, body,
+header, section, footer,
+nav, div, span, pre, p,
+form, input, select, option, img, iframe,
+label, caption, figure, figcaption,
+h1, h2, h3, h4, h5, h6,
+strong, b, u, i {
+    margin: 0;
+	padding: 0;
+    border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+
+/* Box Model */
+
+*, *:before, *:after {
+	-moz-box-sizing: border-box;
+	-webkit-box-sizing: border-box;
+	box-sizing: border-box;
+}

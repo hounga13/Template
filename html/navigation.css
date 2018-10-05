@@ -1,0 +1,188 @@
+/*
+ * Copyright(C) 2018 Hunsup Jung All Right Reserved
+ */
+
+ /* Reset */
+
+ html, body,
+ header, section, footer,
+ nav, div, span, pre, p,
+ form, input, select, option, img, iframe,
+ label, caption, figure, figcaption,
+ h1, h2, h3, h4, h5, h6,
+ strong, b, u, i {
+     margin: 0;
+     padding: 0;
+     border: 0;
+     font-size: 100%;
+     font: inherit;
+     vertical-align: baseline;
+ }
+ 
+ /* Box Model */
+ 
+ *, *:before, *:after {
+     -moz-box-sizing: border-box;
+     -webkit-box-sizing: border-box;
+     box-sizing: border-box;
+ }
+ 
+
+/* Basic */
+
+body {
+    background-color: #fff;
+    color: #000;
+}
+
+@media screen and (max-width: 480px) {
+    html, body {
+        min-width: 320px;
+    }
+}
+
+body.is-loading *, body.is-loading *:before, body.is-loading *:after {
+    -moz-animation: none !important;
+    -webkit-animation: none !important;
+    -ms-animation: none !important;
+    animation: none !important;
+    -moz-transition: none !important;
+    -webkit-transition: none !important;
+    -ms-transition: none !important;
+    transition: none !important;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    font-weight: 600;
+    line-height: 1.5em;
+}
+
+h1 {
+    /* Default 2em */
+    font-size: 2.2rem;
+}
+
+h2 {
+    /* Default 1.5em */
+    font-size: 1.7rem;
+}
+
+h3 {
+    /* Default 1.17em */
+    font-size: 1.3rem;
+}
+
+h4 {
+    /* Default 1em */
+    font-size: 1.1rem;
+}
+
+h5 {
+    /* Default 0.83em */
+    font-size: .9rem;
+}
+
+h6 {
+    /* Default 0.67em */
+    font-size: .7rem;
+}
+
+a {
+    color: black;
+    text-decoration: none;
+}
+
+a:hover {
+    text-decoration: none;
+}
+
+
+/* Header */
+header {
+    background-color: white;
+}
+
+header .inner {
+    margin: 0 auto;
+
+    max-width: 1000px;
+
+    padding: 1em 0;
+    background-color: whitesmoke;
+}
+
+/* Navigation */
+nav {
+    position: relative;
+    display: flex;
+}
+
+nav .nav-box {
+    width: 100%; height: 30px;
+
+    background-color: darkgray;
+}
+
+nav .nav-box:hover {
+    background-color: black;
+    color: white;
+}
+
+nav .nav-box span {
+    display: inline-block;
+
+    width: 100%;
+
+    text-align: center;
+    /* line-height에 의해 nav의 높이가 결정됨 */
+    line-height: 30px;
+}
+
+/* Large Box */
+nav .large-box~.large-content {
+    position: absolute;
+    display: none;
+
+    /* 
+     * 이런식으로 하드코딩해야되는지 고민
+     * 이것도 nav의 height값이 30px라는 걸 알아야 설정가능
+     */
+    top: 30px;
+
+    /* 임의로 넣은 값 */
+    padding: 2em;
+    width: 500px; height: 300px;
+
+    background-color: whitesmoke;
+}
+
+nav .large-box:hover~.large-content {
+    display: block;
+}
+
+
+/* Small Box */
+nav .nav-box .small-content {
+    display: none;
+
+    /* nav height에 맞춰서 30으로 설정 */
+    width: 100%; height: 30px;
+
+    background-color: darkgray;
+    color: black;
+}
+
+nav .nav-box:hover .small-content {
+    display: block;
+}
+
+nav .nav-box:hover .small-content:hover {
+    background-color: black;
+    color: white;
+}
+
+/*
+ * border를 넣는 순간 위치조정과 크기조정의 어려움이 생긴다.
+ * 그래서 테두리가 없는 것이 편하다.
+ * 정 테두리를 넣고 싶다면 배경으로 집어 넣는 것이 편하다.
+ */
